@@ -13,7 +13,7 @@ Use google / authentik as oauth provider for logging into Forgejo (a git platfor
    - Under `Administrator account settings`, create admin user. Make sure you use the same email as your google account
    - Click `Install Forgejo` at the bottom of the screen
 
-### Google OAuth
+### Google provider
 
 1. Follow how to create google oauth client ![here](./oauth-providers/google/README.md)
 2. In forgejo, at the top-right there would be a drop-down, click `Site administration`
@@ -26,3 +26,19 @@ Use google / authentik as oauth provider for logging into Forgejo (a git platfor
 9. Click `Add authentication source`
 10. Go to `http://localhost:3000/user/login` and try logging in with google
 11. Since you use the same forgejo email as your google account, supply your forgejo native credentials to link the accounts
+
+
+### Authentik provider
+
+1. Follow how to create google oauth client ![here](./oauth-providers/authentik/README.md)
+2. In forgejo, at the top-right there would be a drop-down, click `Site administration`
+3. `Identity & access > Authentication sources` and click `Add authentication source`
+4. Authentication type: `OAuth2`
+5. Authentication name: `authentik`
+6. OAuth2 provider: `OpenID Connect`
+7. Paste `Client ID` and `Client Secret` from the authentik oauth setup (#1)
+8. Set `OpenID Connect Auto Discovery URL` to `http://${YOUR_LOCAL_IP}:9000/application/o/forgejo/.well-known/openid-configuration`
+9. Under `Additional scopes` paste following text: `email profile`
+10. Click `Add authentication source`
+11. Go to `http://localhost:3000/user/login` and try logging in with authentik
+12. Since you use the same forgejo email as your authentik account, supply your forgejo native credentials to link the accounts

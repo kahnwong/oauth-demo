@@ -1,6 +1,6 @@
 # google
 
-## Pre-reqs
+## Create oauth client
 
 1. Create gcp project via the web console.
 2. Go to `API & Services > Credentials`
