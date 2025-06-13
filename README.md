@@ -15,7 +15,7 @@ Use google / authentik as oauth provider for logging into Forgejo (a git platfor
 
 ### Google provider
 
-1. Follow how to create google oauth client ![here](./oauth-providers/google/README.md)
+1. Follow how to create google oauth client [here](./oauth-providers/google/README.md)
 2. In forgejo, at the top-right there would be a drop-down, click `Site administration`
 3. `Identity & access > Authentication sources` and click `Add authentication source`
 4. Authentication type: `OAuth2`
@@ -30,7 +30,7 @@ Use google / authentik as oauth provider for logging into Forgejo (a git platfor
 
 ### Authentik provider
 
-1. Follow how to create google oauth client ![here](./oauth-providers/authentik/README.md)
+1. Follow how to create google oauth client [here](./oauth-providers/authentik/README.md)
 2. In forgejo, at the top-right there would be a drop-down, click `Site administration`
 3. `Identity & access > Authentication sources` and click `Add authentication source`
 4. Authentication type: `OAuth2`
